@@ -11,6 +11,7 @@ string* reverseArray(string* arr1,int size){
             *(arr2+i)=*(arr1+(size-1-i));
         }
         return arr2;
+        delete[] arr2;
 }
 //displayArray() takes a pointer to a string array both arr1 and arr2 and then the const size of the array
 // cout both array's to terminal
@@ -37,6 +38,7 @@ int main(){
     *(Array1 + 4) ="Kiwi";
     string* Array2 =reverseArray(Array1,size);
     displayArray(Array1,Array2,size);
-
+    delete[] Array1;
+    delete[] Array2;
     return 0;
 }
